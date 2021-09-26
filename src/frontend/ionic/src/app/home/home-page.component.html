@@ -1,0 +1,67 @@
+<ion-content [fullscreen]="true">
+  <div class="background-image"></div>
+  <div class="scroll">
+
+
+
+    <div class="menurectangle"></div>
+
+    <div class="sidebar">
+      <!--<ion-buttons slot ="start">
+        <ion-menu-button menu="main-menu">
+          <img class="resize" src='../../assets/img/logo.png'>
+        </ion-menu-button>
+      </ion-buttons>-->
+    </div>
+
+
+
+    <div *ngFor="let a of appointments; let i = index" [attr.data-index]="i">
+
+      <div class="ion-padding">
+
+        <article class="article {{ i % 2 ? 'articleLeft' : 'articleRight'}}">
+
+          <div class="rectangle {{ i % 2 ? 'fromLeft' : 'fromRight'}}"></div>
+          <div class="circle {{ i % 2 ? 'circleLeft' : 'circleRight'}}"></div>
+
+          <div class="textWrap">
+           <div class="text {{ i % 2 ? 'textLeft' : 'textRight'}}">
+             <p class="serviceName" (click)="details('3854236a-ddbf-4f72-a21a-236c592560cc')">{{ a.service.name }}</p>
+
+            <p>{{ a.from }} - {{ a.to }}</p>
+
+           </div>
+          </div>
+
+         <div class="kep {{ i % 2 ? 'kepLeft' : 'kepRight'}}">
+          <div class="square">
+           <div class="pic">
+            <img src="{{a.img}}" alt="" />
+           </div>
+          </div>
+         </div>
+
+        </article>
+      </div>
+
+    </div>
+
+
+    <div class="idopontrectangle">
+     <div class="idopontkerese">
+      <div class="idopontText">Időpont kérése</div>
+     </div>
+    </div>
+  </div>
+
+ <div class="background"></div>
+</ion-content>
+
+
+
+
+
+
+
+

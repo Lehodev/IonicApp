@@ -1,0 +1,44 @@
+
+<ion-header [translucent]="true">
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="background-image"></div>
+  <div  id="container">
+
+
+
+  <ion-grid fixed="true">
+
+    <ion-row justify-content-center>
+      <ion-col align-self-center>
+        <div class="flex">
+          <div class="border">
+            <div class="image">
+
+              <img src="assets/akorhaz.ico" alt="login-logo">
+
+            </div>
+          </div>
+        </div>
+
+
+        <p class="title">Regisztráció</p>
+        <p class="log">{{log}}</p>
+        <ion-input placeholder="Teljes név" [(ngModel)]="name"></ion-input>
+        <ion-input placeholder="E-mail cím" [(ngModel)]="email"></ion-input>
+
+        <ion-input placeholder="Jelszó" type="password" [(ngModel)]="password"></ion-input>
+        <ion-input placeholder="Jelszó újra" type="password" [(ngModel)]="passwordAgain"></ion-input>
+
+        <div class="accept">
+        <ion-checkbox color='checkbox' mode="md" (ionChange)="isChecked($event)" [(ngModel)]="read_me"></ion-checkbox>
+        <ion-label class="read_me"> Elolvastam a <a href="">felhasználási feltételeket.</a></ion-label>
+        </div>
+        <ion-button (click) ="register()">Regisztráció</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </div>
+</ion-content>

@@ -1,0 +1,44 @@
+<ion-header>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <div class="logo"></div>
+  <div class="rectangle"><p class="news">Hírek</p></div>
+  <ion-menu-toggle>
+    <img class="content" src="assets\img\logo.png" alt="login-logo">
+  </ion-menu-toggle>
+
+
+  <div class="background-image"></div>
+
+  <div class="margin"></div>
+  <ion-card class="post" button="true" (click)="details(item.id)" *ngFor="let item of items">
+
+
+    <div  class="postPic" *ngIf="item.images.src !== null">
+      <img src="assets\img\doctors.jpg" alt="timeline-picture">
+    </div>
+
+    <ion-card-title>{{item.title}}</ion-card-title>
+
+
+    <div class="text">{{item.content}}</div>
+
+    <p class="date">{{item.created_at}}</p>
+
+
+  </ion-card>
+
+
+  <ion-card class="pages">
+    <div>
+      <ion-button slot="start" *ngIf="showPrevious" (click)="previousPage()">Előző</ion-button>
+      <p class="pageCounter">{{currentPage}}/{{maxPage}}</p>
+      <ion-button class="next" *ngIf="showNext" (click)="nextPage()" item-end>Következő</ion-button>
+    </div>
+  </ion-card>
+
+
+  <div class="background-image"></div>
+</ion-content>

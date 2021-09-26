@@ -1,0 +1,58 @@
+@use '../../theme/colors';
+@use '../../theme/values';
+
+.rectangle {
+  width: 50% ;
+  top: -57vw;
+}
+.logo {
+  top: -10vw;
+}
+.aboutus{
+  transform: rotate(-315deg);
+  color:var(colors.$colorWhite);
+  top: 25%;
+  left: 10%;
+  position: absolute;
+  overflow: hidden;
+  height: auto;
+  font-size: 10vw;
+}
+.content {
+  top: 4%;
+  left: 2%;
+  position: absolute;
+  overflow: hidden;
+  height: auto;
+  width: 30%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.post{
+  background-color: colors.$backgroundBlue;
+  --color:var(colors.$colorWhite);
+  top: -20%;
+  margin: 1% !important;
+  margin-bottom: 1% !important;
+}
+
+p {
+  margin: 5%;
+  color: colors.$colorWhite;
+  font-size: values.$fontSizeSmall
+}
+.buttons{
+  width: 100%;
+  text-align:center;
+  background: colors.$backgroundBlue;
+
+}
+.back-bt{
+  width: 50%;
+  font-size: 50%;
+  margin-top: 40%;
+  margin-bottom: 20%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+

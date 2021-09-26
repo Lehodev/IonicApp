@@ -1,0 +1,30 @@
+<ion-header>
+</ion-header>
+  <ion-content [fullscreen]="true">
+    <div id="back-button">
+      <ion-button color="back" style="height: 70px; width: 70px;" (click)="back()" i><ion-icon class="back-icon" name="chevron-back-outline" ></ion-icon></ion-button>
+    </div>
+    <div class="logo"></div>
+  <img class="content" src="assets\img\logo.png" alt="login-logo">
+
+
+    <div class="background-image"></div>
+    <div class="margin"></div>
+    <ion-card class="post">
+      <ion-card-header>
+        <ion-card-title>{{items.title}}</ion-card-title>
+    <div class="ion-text-center" *ngIf="items.images != null">
+      <img src="assets/img/doctors.jpg" alt="item-picture">
+      </div>
+
+    </ion-card-header>
+    <ion-card-content >
+      <ion-grid>
+        <ion-row class="text">
+            {{items.content}}
+        </ion-row>
+      </ion-grid>
+      </ion-card-content>
+    </ion-card>
+
+ </ion-content>

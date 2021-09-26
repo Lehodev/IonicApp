@@ -1,0 +1,103 @@
+
+<ion-app>
+  <ion-menu menuId="main-menu" content-id="main" (ionWillOpen)="getUser()">
+
+    <ion-content class="background">
+    <div *ngIf="hideLogin">
+        <div class="ion-text-center">
+      <img class="image"   src="{{this.user['image']}}"   alt="Profilkép">
+    </div>
+    <div class="image-text">
+      <ion-label name="email">{{this.user["email"]}}</ion-label>
+    </div>
+  </div>
+      <ion-list class="menu">
+
+       <div *ngIf="hideLogin === false">
+        <ion-menu-toggle>
+        <ion-item routerLink="/login" >
+          <ion-label>Bejelentkezés</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/register" >
+          <ion-label>Regisztráció</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+       </div>
+
+    <div *ngIf="hideLogin === true">
+      <ion-menu-toggle>
+        <ion-item routerLink="/profile">
+          <ion-label>Profil</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </div>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/">
+          <ion-label>Idővonal</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/appointment-make">
+          <ion-label>Új időpont</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/edit-working-hours">
+            <ion-label>Munkaidő szerkesztése</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/settings">
+          <ion-label>Beállítások</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/contact">
+            <ion-label>Kapcsolat</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+
+      <ion-menu-toggle>
+        <ion-item routerLink="/timeline">
+          <ion-label>Hírek</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/working-hours">
+            <ion-label>Munka órák</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+        <ion-menu-toggle>
+          <ion-item routerLink="/about-us">
+            <ion-label>Rólunk</ion-label>
+          </ion-item>
+        </ion-menu-toggle>
+
+      <div *ngIf="hideLogout === false">
+      <ion-menu-toggle>
+        <ion-item routerLink="/timeline" (click)="logOut()">
+          <ion-label>Kijelentkezés</ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </div>
+
+      </ion-list>
+
+    </ion-content>
+
+  </ion-menu>
+  <ion-router-outlet id="main"></ion-router-outlet>
+</ion-app>

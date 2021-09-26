@@ -1,0 +1,53 @@
+<ion-header>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="logo"></div>
+  <div class="rectangle"> <p class="appoint">Új időpont</p></div>
+  <ion-menu-toggle>
+   <img class="content" src="assets\img\logo.png" alt="login-logo">
+  </ion-menu-toggle>
+  <div class="background-image"></div>
+  <div class="margin"></div>
+  <ion-card class="post">
+    <ion-card-header>
+        <p class="title">Hozz létre egy időpontot</p>
+    </ion-card-header>
+    <ion-card-content >
+        <ion-item class="select-item" lines="none">
+          <ion-select [(ngModel)]="server_select" style="max-width: 100%; width: 100%" placeholder="Válassz szolgáltatót" (ionChange)="serverChange($event)" interface="popover">
+            <div *ngFor="let server of serversArr">
+            <ion-select-option  [value]="server.id">{{server.name}}</ion-select-option>
+          </div>
+          </ion-select>
+        </ion-item>
+
+        <ion-item class="select-item" lines="none">
+          <ion-select [(ngModel)]="service_select" style="max-width: 100%; width: 100%" placeholder="Válassz szolgáltatást" (ionChange)="serviceChange($event)" interface="popover">
+            <div *ngFor="let service of servicesArr">
+            <ion-select-option [value]="service.id">{{service.name}}</ion-select-option>
+          </div>
+          </ion-select>
+        </ion-item>
+
+        <ion-item  class="select-item" lines="none">
+          <ion-select [(ngModel)]="appoint_select" style="max-width: 100%; width: 100%" placeholder="Válassz időpontot" interface="popover">
+            <div *ngFor="let appoint of appointsArr">
+            <ion-select-option value="appoint.id">{{appoint.begin_time}}</ion-select-option>
+          </div>
+          </ion-select>
+        </ion-item>
+
+        <ion-item color="none" class="button-item" text-center lines="none">
+          <div class="center-button">
+            <ion-button (click)="back()"class="button-back" >Vissza</ion-button>
+          </div>
+        </ion-item>
+        <ion-item color="none" class="button-item" text-center lines="none">
+          <div class="center-button">
+            <ion-button (click)="setAppointment()" class="button-submit" >Küldés</ion-button>
+          </div>
+        </ion-item>
+      </ion-card-content>
+  </ion-card>
+</ion-content>

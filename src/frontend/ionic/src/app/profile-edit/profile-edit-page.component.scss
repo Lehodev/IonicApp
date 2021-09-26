@@ -1,0 +1,65 @@
+@use '../../theme/colors';
+@use '../../theme/values';
+
+img {
+    width: 25%;
+    height: 25%;
+    margin-top: 5%;
+    border-radius: 50%;
+    margin-bottom: 5%;
+}
+#back-button{
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 4%;
+}
+
+#save {
+        text-align: center;
+        font-weight: bold;
+        width: 100px;
+        border: none;
+        border-radius: 15%;
+}
+ion-input {
+    align-items: center;
+    text-align: center ;
+    background: colors.$backgroundBlue;
+    border-style: none;
+    resize: none;
+    height: 40px;
+    color: colors.$colorWhite;
+    padding-top: 5px;
+    border-radius: 0%;
+    margin:1px;
+    --placeholder-opacity: 0.5;
+}
+ion-button {
+
+    margin-left: auto;
+    margin-right: auto;
+    color: colors.$colorWhite;
+
+}
+ion-content {
+
+   font-size: values.$fontSizeLarge;
+
+}
+@media screen and (min-width: 600px) {
+    img {
+        width: 25%;
+        height: 25%;
+        margin-top: 0%;
+        margin-bottom: 10px;
+        border-radius: 50%;
+    }
+
+
+    #save{
+        text-align: center;
+        border: none;
+        width: 300px;
+        margin-top: 6%;
+    }
+  }

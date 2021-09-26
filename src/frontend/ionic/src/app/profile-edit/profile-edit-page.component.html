@@ -1,0 +1,25 @@
+<ion-header>
+</ion-header>
+<ion-content>
+  <div id="back-button">
+  <ion-button (click)="back()" i><ion-icon name="chevron-back-outline"></ion-icon></ion-button>
+</div>
+  <div class="background-image"></div>
+  <div class=" container Picture ion-text-center">
+    <img src="assets/logo.png"   alt="Profile Picture">
+  </div>
+  <div class=" inputs ion-text-center">
+
+    <ion-input  value='{{this.datas["name"]}}' placeholder="Név"></ion-input>
+    <ion-input  value='{{this.datas["email"]}}' placeholder="Email"></ion-input>
+    <ion-input  value='{{this.datas["country"]}}' placeholder="Ország"></ion-input>
+    <ion-input  value='{{this.datas["postcode"]}}' placeholder="Irányítószám"></ion-input>
+    <ion-input  value='{{this.datas["city"]}}' placeholder="Város"></ion-input>
+    <ion-input  value='{{this.datas["address"]}}' placeholder="Cím"></ion-input>
+    <ion-input  value="{{current_password}}" placeholder="jelenlegi jelszo"></ion-input>
+    <ion-input value="{{password}}" placeholder="Jelszó"></ion-input>
+    <ion-input  value="{{password_confirmation}}" placeholder="Jelszó megerősítése"></ion-input>
+
+</div>
+  <ion-button id="save" color="edit" (click)="save()" expand="block">Mentés</ion-button>
+</ion-content>

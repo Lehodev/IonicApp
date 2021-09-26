@@ -1,0 +1,31 @@
+<ion-header>
+</ion-header>
+
+<ion-content>
+  <div class="logo"></div>
+  <div class="rectangle"><p class="aboutus">Rólunk</p></div>
+  <ion-menu-toggle>
+    <img class="content" src="assets\img\logo.png" alt="login-logo">
+  </ion-menu-toggle>
+
+  <div class="background-image"></div>
+
+  <ion-card class="post">
+    <ion-card-content>
+      <p>Ezt a szoftvert az Example kft. készítette XYZ kft. számára<br>
+      Jelenlegi verzió: 0.1.0a (Nincs elérhető frissítés)</p>
+      <p>Dokumentumok:<br>
+        <a href="">Végfelhasználói szerződés</a><br>
+        <a href="">Felhasználási feltételek</a><br>
+        <a href="">Adatkezlési nyilatkozat</a><br></p>
+      <p>Kapcsolat a fejlesztőkkel:<br>
+        <a href="" (click)="contantEmail()">example@example.test</a><br></p>
+      <p>Hiba jelentés:<br>
+        <a href="" (click)="bugReport()">example2@example.com</a><br></p>
+
+      <ion-item color='none' lines="none" class='item'><ion-button color='button' class='back-bt' (click) = "back()">Vissza</ion-button></ion-item>
+    </ion-card-content>
+    <ion-footer><p>Ⓒ 2021 Example kft. Minden jog fenntartva.</p></ion-footer>
+  </ion-card>
+
+</ion-content>

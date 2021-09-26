@@ -1,0 +1,36 @@
+<ion-header></ion-header>
+<ion-content>
+  <div class="logo"></div>
+  <div class="rectangle"> <p class="news">Elérhetőségek</p></div>
+  <ion-menu-toggle>
+   <img class="content" src="assets\img\logo.png" alt="login-logo">
+  </ion-menu-toggle>
+
+
+  <div class="background-image"></div>
+
+  <div class="margin"></div>
+
+  <ion-card class='post'>
+    <ion-card-header>
+      <ion-card-title class="title">Szolgáltató neve</ion-card-title>
+      <img src="assets\img\korhaz.png" alt="contact-picture">
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <p class="text">Li Europan lingues es membres del sam familie. Lor separat existentie es un myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li lingues differe solmen in li grammatica, li pronunciation e li plu commun vocabules. Omnicos directe al desirabilite de un nov lingua franca.</p>
+          <div class="text-center">
+            Cím<br>
+            E-mail<br>
+            Telefon</div>
+          <div class='buttons'>
+            <ion-item color='none' lines="none" class='item'><ion-button color='button' class='email-bt' (click) = "sendEmail()">E-mail küldése</ion-button></ion-item>
+            <ion-item color='none' lines="none" class='item'><ion-button color='button' class='back-bt' (click) = "back()">Vissza</ion-button></ion-item>
+          </div>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+
+  </ion-card>
+</ion-content>

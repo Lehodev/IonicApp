@@ -1,0 +1,58 @@
+<ion-header>
+</ion-header>
+
+<ng-template #template let-view="view" let-row="row" let-col="col">
+  <p [ngStyle]="{'color': 'white'}">{{view.dates[row*7+col].label}}</p>
+</ng-template>
+
+<ion-content fullscreen>
+
+  <div class="logo"></div>
+  <div class="rectangle"> <p class="working_hour">Időpont szerkesztés</p></div>
+  <ion-menu-toggle>
+    <img class="content" src="assets\img\logo.png" alt="login-logo">
+  </ion-menu-toggle>
+  <div class="background-image"></div>
+  <div class="margin"></div>
+  <ion-card class="post">
+
+    <ion-segment [(ngModel)]="calendar.mode">
+      <ion-segment-button value="month">
+        <ion-label>Hónap</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="week">
+        <ion-label>Hét</ion-label>
+      </ion-segment-button>
+      <ion-segment-button value="day">
+        <ion-label>Nap</ion-label>
+      </ion-segment-button>
+    </ion-segment>
+    <button ion-button (click)="loadEvents()">Load Events</button>
+    <ion-row>
+        <ion-col size="2">
+          <ion-button fill="clear" (click)="back()">
+            <ion-icon name="arrow-back" slot="icon-only"></ion-icon>
+          </ion-button>
+        </ion-col>
+      <ion-col size="8" class="ion-text-center">
+        <h2>{{viewTitle}}</h2>
+      </ion-col>
+      <ion-col size="1">
+        <ion-button fill="clear" (click)="next()">
+          <ion-icon name="arrow-forward" slot="icon-only"></ion-icon>
+        </ion-button>
+      </ion-col>
+    </ion-row>
+    <calendar [eventSource]="eventSource"
+              [calendarMode]="calendar.mode"
+              [currentDate]="calendar.currentDate"
+              (onCurrentDateChanged)="onCurrentDateChanged($event)"
+              (onEventSelected)="onEventSelected($event)"
+              (onTitleChanged)="onViewTitleChanged($event)"
+              (onTimeSelected)="onTimeSelected($event)"
+              [step]="calendar.step"
+              [monthviewDisplayEventTemplate]="template">
+
+    </calendar>
+  </ion-card>
+</ion-content>

@@ -1,0 +1,45 @@
+<ion-header>
+</ion-header>
+
+<ion-content fullscreen>
+  <div class="logo"></div>
+  <div id="back-button">
+    <ion-button color="back" style="height: 70px; width: 70px;" (click)="back()" i><ion-icon class="back-icon" name="chevron-back-outline" ></ion-icon></ion-button>
+  </div>
+  <ion-menu-toggle>
+    <img class="content" src="assets\img\logo.png" alt="login-logo">
+  </ion-menu-toggle>
+  <div class="background-image"></div>
+  <ion-card class="inspect">
+    <ion-card-header>
+        <p class="title">{{name}}</p>
+    </ion-card-header>
+    <ion-card-content >
+      <ion-grid >
+        <ion-row>
+          <ion-text class="label">Szolgáltató neve:</ion-text>
+        </ion-row>
+        <ion-row class="row-margin">
+          <ion-text class="text">{{server_name}}</ion-text>
+        </ion-row>
+        <ion-row>
+          <ion-text class="label">Időpont:</ion-text>
+        </ion-row>
+        <ion-row class="row-margin">
+          <ion-text class="text">11:00-12:00</ion-text>
+        </ion-row>
+        <ion-row>
+          <ion-text class="label">Leírás:</ion-text>
+        </ion-row>
+        <ion-row class="row-margin">
+          <ion-text class="text description">{{description}}</ion-text>
+        </ion-row>
+      </ion-grid>
+      <ion-item color="none" class="button-item" text-center lines="none">
+        <div class="center-button">
+          <ion-button (click)="cancelAppointment()" color="delete" >Lemondás</ion-button>
+        </div>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

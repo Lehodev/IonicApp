@@ -1,0 +1,33 @@
+
+.menu {
+margin-top: 10%;
+}
+.image {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    align-items: center;
+    margin-top: 20%;
+}
+.image-text {
+    color: white;
+    text-align: center;
+    margin-top: 2%;
+}
+ion-menu {
+    --ion-background-color: var(--ion-background-color-tp);
+    --ion-text-color: var(--ion-color-primary-contrast);
+  
+    ion-toolbar {
+      --background: var(--ion-color-primary);
+    }
+    ion-item {
+        --background: rgb(19, 83,119);
+        text-align: center;
+        color: white;
+        font-variant:inherit;
+    }
+    ion-list {/* optional, but it needs when you use gradient as a background color.*/
+      background: transparent;
+    }
+  }

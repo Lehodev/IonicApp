@@ -1,0 +1,87 @@
+@use '../../theme/colors';
+@use '../../theme/values';
+
+#container {
+    text-align: center;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 2vh;
+    margin-top: 0%;
+    color: colors.$registerLoginBasicColor;
+    display:flex;
+
+  }
+
+  .title {
+    font-size: values.$fontSizeLarge;
+    margin-bottom: 10vh;
+    color: colors.$colorBlack;
+  }
+
+  #container a {
+    text-decoration: none;
+
+  }
+
+  .image
+  {
+    border-radius: 50%;
+    overflow: hidden;
+    height: 18vh;
+    width: 18vh;
+  }
+
+.border{
+    border: 4px solid colors.$colorBlack;
+    border-radius: 50%;
+    width: fit-content;
+}
+
+.flex{
+  display: flex;
+  justify-content: center;
+
+}
+
+  ion-content{
+    --ion-background-color: #12577c;
+  }
+
+  ion-input{
+    margin-bottom: 8%;
+    height: 8vh;
+    font-size: values.$fontSizeLarge;
+  }
+
+  ion-button{
+    width: 50vw;
+    height: 6vh;
+    margin-top: 5vh;
+    font-size: 4vw;
+  }
+
+  .remember{
+    font-size: values.$fontSizeMedium;
+    margin:0 0 0 2vw;
+    text-align: center;
+    ion-checkbox{
+      --size:4%;
+      --background:var(colors.$registerLoginBasicColor);
+    }
+  }
+
+  ion-label{
+    font-size: values.$fontSizeSmall;
+  }
+  .log{
+    font-size: values.$fontSizeSmall;
+    color: colors.$colorBlack;
+  }
+
+.remember_me{
+  color: colors.$colorBlack;
+}

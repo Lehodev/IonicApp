@@ -1,0 +1,83 @@
+@use '../../theme/colors';
+@use '../../theme/values';
+
+.margin{
+  margin-top:-20vh;
+
+}
+
+ion-button{
+  width: 23vw;
+  font-size: values.$fontSizeMedium;
+  height: 5vh;
+}
+.news{
+  transform: rotate(-315deg);
+  color: colors.$colorWhite;
+  top: 34%;
+  left: -5%;
+  position: absolute;
+  overflow: hidden;
+  height: auto;
+  font-size: values.$fontSizeLarge;
+}
+
+.content {
+  top: 4%;
+  left: 2%;
+  position: absolute;
+  overflow: hidden;
+  height: auto;
+  width: 30%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.title{
+  color: colors.$colorWhite;
+  font-size: values.$fontSizeMedium;
+}
+
+.text{
+  font-size: values.$fontSizeSmall;
+}
+
+.text-center{
+  font-size: values.$fontSizeSmall;
+  text-align: center;
+  width: 100%;
+  margin-top: 10%;
+  margin-bottom: 10%;
+}
+.buttons{
+  width: 100%;
+  text-align:center;
+  background: colors.$backgroundBlue;
+
+}
+
+.email-bt{
+  width: 80%;
+  font-size: 50%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+.back-bt{
+  width: 50%;
+  font-size: 50%;
+  margin-left: 25%;
+  margin-right: 25%;
+}
+
+.post{
+  background: colors.$backgroundBlue;
+  color: colors.$colorWhite;
+  margin: 2px !important;
+  margin-bottom: 10px !important;
+}
+
+.item{
+  background: colors.$backgroundBlue !important;
+}

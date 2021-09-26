@@ -1,0 +1,64 @@
+.rectangle{
+  top: -28%;
+  right: -53%;
+
+  position: relative;
+  width: 60%;
+
+  background-color: rgb(1,37,71);
+  transform: rotate(315deg);
+}
+.rectangle::after{
+  content: "";
+  display: block;
+  padding-bottom: 80%;
+}
+.content {
+  top: 4%;
+  left: 2%;
+  position: absolute;
+  overflow: hidden;
+  height: auto;
+  width: 30%;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.working_hour{
+  transform: rotate(-315deg);
+  color:white;
+  top: 40%;
+  right: 10%;
+  position: absolute;
+  overflow: hidden;
+  height: auto;
+  font-size: 6vw;
+}
+
+.margin{
+  margin-top:-20vh;
+
+}
+
+.post{
+  --background:#082944;
+  --color:white;
+  margin: 0px !important;
+  margin-bottom: 0px !important;
+  height: 100% !important;
+}
+
+.center-button {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar.mode{
+  color:white !important;
+}
+
+
+

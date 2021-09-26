@@ -1,0 +1,44 @@
+
+    <ion-header [translucent]="true">
+
+    </ion-header>
+
+    <ion-content [fullscreen]="true">
+      <div class="background-image"></div>
+
+      <div  id="container">
+
+      <ion-grid fixed="true">
+
+        <ion-row justify-content-center>
+          <ion-col align-self-center>
+            <div class="flex">
+              <div class="border">
+                <div class="image">
+
+                  <img src="assets/akorhaz.ico" alt="login-logo">
+
+                </div>
+              </div>
+            </div>
+
+
+            <p class="title">Bejelentkezés</p>
+
+            <p class="log">{{log}}</p>
+            <ion-input placeholder="E-mail cím" [(ngModel)]="email"></ion-input>
+
+            <ion-input placeholder="Jelszó" type="password" [(ngModel)]="password"></ion-input>
+            <div class="remember">
+
+              <ion-checkbox mode="md" slot="start" (ionChange)="isChecked($event)" [(ngModel)]="remember_me"></ion-checkbox>
+              <ion-label class="remember_me"> Emlékezz rám</ion-label>
+
+            </div>
+            <ion-button (click) ="loginVerification()">Bejelentkezés</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      </div>
+  </ion-content>

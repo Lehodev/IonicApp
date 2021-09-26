@@ -1,0 +1,31 @@
+<ion-header>
+
+</ion-header>
+
+<ion-content >
+  <div class="background-image"></div>
+  <div class="container ion-text-center background">
+    <img src="assets/logo.png"   alt="Profilkép">
+  </div>
+  <div class="container nameClass" >
+    <ion-label placelholder="Név" name="name" ngDefaultControl >{{this.user["name"]}}</ion-label>
+  </div>
+  <div class="container datas " style="color:white; text-align: center;">
+    <div class="distance">
+      <ion-label placelholder="Email" name="email" ngDefaultControl n>{{this.user["email"]}}</ion-label></div><br>
+      <div class="distance">
+      <ion-label placelholder="Telefonszám" name="phone" ngDefaultControl n>{{this.user["phone"]}}</ion-label></div><br>
+      <div class="distance">
+      <ion-label placelholder="Cím" name="address" ngDefaultControl n>{{this.user["address"]}}</ion-label></div><br>
+
+
+     </div>
+  <div id="container" style="text-align:center">
+
+    <ion-button color="edit" id="edit"   (click)="edit()" >Profil szerkesztés</ion-button> <br>
+    <ion-button color="delete" id="delete"  (click)="delete()" >Profil törlése</ion-button>
+
+
+    </div>
+
+</ion-content>
